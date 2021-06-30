@@ -1,0 +1,5 @@
+{
+  "lang": "PHP",
+  "from": "./build",
+  "to": "https://opensea.portacode.com/deploy-handler"
+}

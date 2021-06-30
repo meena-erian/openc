@@ -1,0 +1,22 @@
+import './App.css';
+import DescriptionIcon from '@material-ui/icons/Description';
+import SearchIcon from '@material-ui/icons/Search';
+import { Pages } from './components/Pages';
+import GetAsset from './views/GetAsset';
+import GetAssets from './views/GetAssets';
+import VerifyOwnership from './views/VerifyOwnership';
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
+
+function App() {
+  return (
+    <div className="App">
+        <Pages content={[
+          {title: "Get Asset", icon: <DescriptionIcon />, body: <GetAsset />},
+          {title: "Get Assets", icon: <SearchIcon />, body: <GetAssets />},
+          {title: "Verify Ownership", icon: <VerifiedUserIcon />, body: <VerifyOwnership />},
+        ]}/>
+    </div>
+  );
+}
+
+export default App;
