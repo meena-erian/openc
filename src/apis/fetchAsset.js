@@ -1,10 +1,11 @@
 import seaport from '../components/seaport';
 
-async function fetchAsset(tokenAddress){
+async function fetchAsset(tokenAddress, tokenId){
     const asset = {
         tokenAddress: tokenAddress,
-        tokenId: "1"
+        tokenId: tokenId
     };
+    console.log("Fetching asset", asset);
     const OpenSeaAsset = await seaport.api.getAsset(asset);
     return OpenSeaAsset;
 }

@@ -26,11 +26,12 @@ export default function GetAsset() {
   async function handleSubmit(e){
       e.preventDefault();
       const tokenAddress = e.target.tokenaddress.value;
+      const tokenId = e.target.tokenid.value;
       
       setLoading(true);
       var ret = "Not Found";
       try{
-        ret = await fetchAsset(tokenAddress);
+        ret = await fetchAsset(tokenAddress, tokenId);
       } catch (e){
         console.log(e);
       }
@@ -44,9 +45,17 @@ export default function GetAsset() {
             id="token-address" 
             name="tokenaddress"
             fullWidth 
-            label="Token Address" 
+            label="Token Address (Contract Address)" 
             variant="outlined" 
             defaultValue="0x06012c8cf97bead5deae237070f9587f8e7a266d" 
+        />
+        <TextField 
+            id="token-id" 
+            name="tokenid"
+            fullWidth 
+            label="Token Id" 
+            variant="outlined" 
+            defaultValue="1" 
         />
         <Button 
             variant="contained" 
