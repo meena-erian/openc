@@ -47,7 +47,8 @@ export default function GetAsset() {
             fullWidth 
             label="Token Address (Contract Address)" 
             variant="outlined" 
-            defaultValue="0x06012c8cf97bead5deae237070f9587f8e7a266d" 
+            //defaultValue="0x06012c8cf97bead5deae237070f9587f8e7a266d" 
+            defaultValue="0x3d2e62b1d9f211a47c1c9302ec57133d36b9a32a" // Rinkeby
         />
         <TextField 
             id="token-id" 
@@ -55,7 +56,8 @@ export default function GetAsset() {
             fullWidth 
             label="Token Id" 
             variant="outlined" 
-            defaultValue="1" 
+            //defaultValue="1" 
+            defaultValue="507" // Rinkeby
         />
         <Button 
             variant="contained" 
