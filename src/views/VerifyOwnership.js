@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function GetAsset() {
+export default function VerifyOwnership() {
   const classes = useStyles();
   const [loading, setLoading] = useState(false);
   const [editorDiv, setEditorDiv] = useState(false);
@@ -27,11 +27,12 @@ export default function GetAsset() {
       e.preventDefault();
       const accountAddress = e.target.accountaddress.value;
       const tokenAddress = e.target.tokenaddress.value;
+      const tokenId = e.target.tokenid.value;
       
       setLoading(true);
       var ret = "Not Found";
       try{
-        ret = await fetchOwnership(accountAddress, tokenAddress);
+        ret = await fetchOwnership(accountAddress, tokenAddress, tokenId);
       } catch (e){
         console.log(e);
       }
@@ -47,7 +48,7 @@ export default function GetAsset() {
             fullWidth 
             label="Account Address" 
             variant="outlined" 
-            defaultValue="0x88207b431510dbe0addbdae3bd53013813fc8c71" 
+            defaultValue="0xd4f6cb0c1fe07407b7098ac7fe4265f3b2ae61f2" 
         />
         <TextField 
             id="token-address" 
@@ -55,7 +56,15 @@ export default function GetAsset() {
             fullWidth 
             label="Token Address" 
             variant="outlined" 
-            defaultValue="0x06012c8cf97bead5deae237070f9587f8e7a266d" 
+            defaultValue="0xe4c2bcf7c6bda591d2b18a5a1a68b604e8fc5538" 
+        />
+        <TextField 
+            id="token-id" 
+            name="tokenid"
+            fullWidth 
+            label="Token Id" 
+            variant="outlined" 
+            defaultValue="7" 
         />
         <Button 
             variant="contained" 
