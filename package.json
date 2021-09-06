@@ -3,13 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@0x/subproviders": "^6.6.0",
+    "@blueprintjs/core": "^3.46.0",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "opensea-js": "^1.1.11",
     "react": "^17.0.2",
+    "react-ace": "^9.4.1",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^0.2.4",
+    "web3": "^1.3.6",
+    "web3-provider-engine": "^16.0.1",
     "workbox-background-sync": "^5.1.3",
     "workbox-broadcast-update": "^5.1.3",
     "workbox-cacheable-response": "^5.1.3",
@@ -21,17 +30,7 @@
     "workbox-range-requests": "^5.1.3",
     "workbox-routing": "^5.1.3",
     "workbox-strategies": "^5.1.3",
-    "workbox-streams": "^5.1.3",
-
-    "@blueprintjs/core": "^3.46.0",
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/icons": "^4.11.2",
-    "dotenv": "^10.0.0",
-    "opensea-js": "^1.1.11",
-    "react-ace": "^9.4.1",
-    "react-router-dom": "^5.2.0",
-    "web3": "^1.3.6",
-    "web3-provider-engine": "^16.0.1"
+    "workbox-streams": "^5.1.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -56,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^7.0.3"
   }
 }

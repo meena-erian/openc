@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import { Button } from '@material-ui/core';
 import sendBuyOrder from '../apis/sendBuyOrder';
-
 import ace from "../components/ace";
+const ACCOUNT_1 = process.env.REACT_APP_ACCOUNT_1;
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -52,7 +52,7 @@ export default function CreateBuyOrder() {
                 fullWidth
                 label="Account Address (Buyer)"
                 variant="outlined"
-                defaultValue="0x88207b431510dbe0addbdae3bd53013813fc8c71"
+                defaultValue={ACCOUNT_1}
             />
             <TextField
                 id="token-address"
@@ -84,7 +84,7 @@ export default function CreateBuyOrder() {
                 fullWidth
                 label="Start Amount"
                 variant="outlined"
-                defaultValue="1.2"
+                defaultValue="0.02"
             />
             <Button
                 variant="contained"
